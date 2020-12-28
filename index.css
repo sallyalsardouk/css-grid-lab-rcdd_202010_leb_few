@@ -7,10 +7,10 @@ body {
 .grid-container {
   height: 100vh;
   width: 100vw;
-  display: grid
   /* your properties here */
-  grid-template: 1fr 1fr 1fr 1fr / 1fr 1fr 1fr;
-  grid-gap: 5px;
+  display: grid;
+  grid-template-rows: [header-start] 1fr [header-end] repeat(auto, 1fr);
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
 .grid-item {
@@ -19,10 +19,7 @@ body {
 }
 
 /* add the .bigItem class */
+
 .bigItem {
-  grid-area:2 / 2 / 4 / 4;
-  height: 50%;
-  width: 50%;
-  justify-self: center;
-  align-self: center;
+  grid-area: 2 / 2 / 4 / 4;
 }
